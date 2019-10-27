@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
   res.send(`UserInfo: ${userInfo}`);
 });
+app.use(express.json());
 
 platziStore(app);
 

@@ -43,6 +43,20 @@ const productsMock = [
   },
 ];
 
+
+
+
+class ProductServiceMock {
+  async getProducts() {
+    return Promise.resolve(productsMock);
+  }
+
+  async createPorducts() {
+    return Promise.resolve(productsMock[0]);
+  }
+}
+
 module.exports = {
-  productsMock
+  productsMock,
+  ProductServiceMock
 };
