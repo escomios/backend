@@ -1,7 +1,7 @@
 {
-  "name": "escuelajs-reto-09",
+  "name": "backend for movi",
   "version": "1.0.0",
-  "description": "Reto 9 Octubre 26: Curso de Backend con Node",
+  "description": "Backend for Movi",
   "main": "index.js",
   "dependencies": {
     "@hapi/boom": "^8.0.1",
@@ -21,20 +21,14 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "dev": " SET DEBUG=app:* &  nodemon src/index.js",
-    "start": "SET NODE_ENV=production &  node src/index.js",
+    "dev": "DEBUG=app:* nodemon src/index.js",
+    "start": "NODE_ENV=production node src/index.js",
     "test": "mocha --exit"
-
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platzi/escuelajs-reto-09.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/platzi/escuelajs-reto-09/issues"
-  },
-  "homepage": "https://github.com/platzi/escuelajs-reto-09#readme"
+  "license": "ISC"
 }

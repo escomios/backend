@@ -3,7 +3,7 @@ const path = require("path");
 const ProductService = require("../services");
 const receipt = "../assets/receipt.pdf";
 
-const platziStore = app => {
+const movi = app => {
   const router = express.Router();
   app.use("/api/", router);
 
@@ -13,37 +13,37 @@ const platziStore = app => {
     res.send(`API v2`);
   });
 
-  router.get("/receipts", (req, res, next) => {
+/*   router.get("/receipts", (req, res, next) => {
     let file = path.join(__dirname, receipt);
     res.sendFile(file);
   });
-
-  router.get("/products", async (req, res, next) => {
+ */
+  router.get("/trips", async (req, res, next) => {
     try {
-      const products = await productService.getProducts();
+      const trips = await productService.getTrips();
       res.status(200).json({
-        data: products,
-        message: "Products listed"
+        data: trips,
+        message: "Trips listed"
       });
     } catch (err) {
       next(err);
     }
   });
 
-  router.post("/products", async (req, res, next) => {
-    const { body: product } = req;
+  router.post("/trips", async (req, res, next) => {
+    const { body: trip } = req;
     try {
-      const createProdcutId = await productService.createProduct({ product });
+      const createTripId = await productService.createTrip({ trip });
       res.status(201).json({
-        data: createProdcutId,
-        message: "Product created"
+        data: createTripId,
+        message: "Trip created"
       });
     } catch (err) {
       next(err);
     }
   });
 
-  router.put("/products/:productId", async (req, res, next) => {
+ /*  router.put("/products/:productId", async (req, res, next) => {
     const { body: product } = req;
     const { productId } = req.params;
 
@@ -76,10 +76,10 @@ const platziStore = app => {
       next(err);
     }
   });
-
+ */
   router.get("*", (req, res) => {
     res.status(404).send("Error 404");
   });
 };
 
-module.exports = platziStore;
+module.exports = movi;

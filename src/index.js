@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const { config } = require('./config');
-const platziStore = require('./routes')
+const movi = require('./routes')
 
 app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 app.use(express.json());
 
-platziStore(app);
+movi(app);
 
 app.listen(config.port, err => {
   if (err) {
