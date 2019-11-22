@@ -1,0 +1,12 @@
+{
+  "name": "movi",
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+  "env": {
+    "DB_USER": "@movi-db-user",
+    "DB_PASSWORD": "@movi-password",
+    "DB_HOST": "@movi-host",
+    "DB_NAME": "@movi-db-name"
+  }
+}

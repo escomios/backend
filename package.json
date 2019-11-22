@@ -1,5 +1,5 @@
 {
-  "name": "backend for movi",
+  "name": "escuelajs-reto-09",
   "version": "1.0.0",
   "description": "Backend for Movi",
   "main": "index.js",
@@ -26,7 +26,7 @@
     "test": "mocha --exit"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "keywords": [],
   "author": "",

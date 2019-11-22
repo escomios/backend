@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-const { config } = require('./config');
-const movi = require('./routes')
+const { config } = require('./src/config');
+const movi = require('./src/routes')
 
 app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
