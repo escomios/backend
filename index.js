@@ -1,10 +1,12 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+const cors = require("cors");
 
-const { config } = require('./config');
-const movi = require('./routes')
+const { config } = require("./src/config");
+const movi = require("./src/routes");
+app.use(cors());
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   let userInfo = req.header("user-agent");
   res.send(`UserInfo: ${userInfo}`);
 });
